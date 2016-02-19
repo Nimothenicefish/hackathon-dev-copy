@@ -83,7 +83,17 @@ class MyMatrix
      */
     public function fillZero()
     {
-        /** @TODO */
+        $cloneMatrix = $this->matrix;
+        foreach ($cloneMatrix as $rowIndex => $row) {
+            foreach ($row as $columnIndex => $value) {
+                if ($value == '0') {
+                    for ($i = 0; $i <= count($row); $i++) {
+                        $this->matrix[$rowIndex][$i] = '0';
+                        $this->matrix[$i][$columnIndex] = '0';
+                    }
+                }
+            }
+        }
 
         return $this;
     }
