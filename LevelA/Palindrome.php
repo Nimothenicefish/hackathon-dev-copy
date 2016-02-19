@@ -20,7 +20,7 @@ class Palindrome
      */
     public function generatePalindrome()
     {
-        return sprintf('%s%s', $this->str, implode('', array_reverse(str_split($this->str))));
+        return sprintf('%s%s', $this->str, implode('', array_reverse(preg_split('//u', $this->str, -1, PREG_SPLIT_NO_EMPTY))));
     }
 
 }
