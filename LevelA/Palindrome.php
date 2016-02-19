@@ -20,9 +20,7 @@ class Palindrome
      */
     public function generatePalindrome()
     {
-        /** @TODO */
-
-        return 'abccba';
+        return sprintf('%s%s', $this->str, implode('', array_reverse(str_split($this->str))));
     }
 
 }
